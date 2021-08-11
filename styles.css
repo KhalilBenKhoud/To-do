@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+* , *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    scroll-behavior: smooth;
+    background-color: hsl(235, 21%, 11%) ;
+
+}
+
+
+header {
+    background-image: url('images/bg-desktop-dark.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap : 35px ;
+   
+}
+
+
+
+.Up-container {
+    width: 40%;
+  
+    display: flex;
+    justify-content: space-between;
+}
+
+.Up-container h1 {
+    color: whitesmoke ;
+}
+.mode {
+    cursor: pointer;
+
+}
+.input {
+   width: 40%;
+   display: flex;
+   align-items: center;
+}
+
+#enter {
+    background-color: gainsboro  ;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-input {
+    width: 100%;
+    font-size: 18px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: hsl(233, 14%, 35%) ;
+    color  : white ;
+    padding: 15px;
+}
+
+
+main {
+    min-height: 60vh ;
+    position: relative;
+  
+}
+
+
+.container {
+    background-color: hsl(233, 14%, 35%) ;
+    width: 40%;
+    position: absolute;
+    top: -10% ;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 150;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color : whitesmoke ;
+}
+
+.row {
+    border-bottom: .5px solid gainsboro ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px ;
+    padding: 15px;
+    position: relative;
+}
+.remove {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]
+{   border: none;
+    outline: none ;
+  
+}
+
+.container footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 15px;
+    color: rgba(128, 128, 128, 0.63)  ;
+}
+
+.first {
+    color: black ;
+}
+
+.middle span:first-child {
+    color : cadetblue ;
+}
+.last > *:hover, .middle > *:hover {
+    color : cadetblue ;
+    cursor: pointer;
+}
+
+
+.middle > * {
+    margin:  0 5px;
+}
+
+
+.hide {
+    display: none ;
+}
+
+
+@media screen and (max-width: 700px) {
+    
+    .Up-container {
+        width: 85%;
+    }
+    .input {
+        width: 85%;
+    }
+    .container {
+        width: 85%;
+        top: -5% ;
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: landscape)
+{
+    .container {
+        width: 85%;
+        top: 10% ;
+    }
+
+}
