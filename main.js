@@ -47,8 +47,8 @@ remove.addEventListener("click", (e) => {
 var container = document.getElementsByClassName("container")[0]
 var enterBtn = document.getElementById("enter")
 var input = document.getElementsByClassName("main-input")[0]
-
-enterBtn.addEventListener("click", ()=> {
+function addTodo()
+{
   if(input.value == "") {
     alert("Please fill the field ")
     return
@@ -70,8 +70,17 @@ enterBtn.addEventListener("click", ()=> {
   checkCount()
   updateRemove()
   input.value = ""
+}
+enterBtn.addEventListener("click", ()=> {
+  addTodo()
 })
 
+
+document.addEventListener("keypress",  (e) => {
+  if (e.key === 'Enter') {
+    addTodo()
+  }
+})
 
 
 //items left count
